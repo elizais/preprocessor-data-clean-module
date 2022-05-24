@@ -1,0 +1,52 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "root workspace",
+  "homepage": "https://github.com/Byndyusoft/ᐸRepository nameᐳ#readme",
+  "bugs": {
+    "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Byndyusoft",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn packages/dtos run build && yarn packages/client run build && yarn packages/dtosTesting run build && yarn packages/entities run build && yarn packages/migrator run build && yarn packages/app run build",
+    "build:src": "yarn packages/dtos run build:src && yarn packages/client run build:src && yarn packages/dtosTesting run build:src && yarn packages/entities run build:src && yarn packages/migrator run build:src && yarn packages/app run build:src",
+    "postinstall": "(husky install && ts-patch install) || true",
+    "lint": "yarn run lint:eslint && yarn run lint:markdown && yarn run lint:prettier",
+    "lint:eslint": "eslint --ignore-path ./.gitignore --max-warnings 0 --ext .ts,.js .",
+    "lint:eslint:fix": "eslint --ignore-path ./.gitignore --fix --ext .ts,.js .",
+    "lint:fix": "yarn run lint:eslint:fix && yarn run lint:markdown:fix && yarn run lint:prettier:fix",
+    "lint:markdown": "markdownlint --ignore-path ./.gitignore \"./**/*.md\"",
+    "lint:markdown:fix": "markdownlint --ignore-path ./.gitignore --fix \"./**/*.md\"",
+    "lint:prettier": "prettier --ignore-path ./.gitignore --check \"./**/*.{ts,js,json,yaml,yml,md}\"",
+    "lint:prettier:fix": "prettier --ignore-path ./.gitignore --write \"./**/*.{ts,js,json,yaml,yml,md}\"",
+    "start": "yarn packages/app run start",
+    "start:migrator": "yarn packages/migrator run start",
+    "start:migrator:prod": "yarn packages/migrator run start:prod",
+    "start:prod": "yarn packages/app run start:prod",
+    "test": "yarn packages/app run test",
+    "test:cov": "yarn packages/app run test:cov"
+  },
+  "devDependencies": {
+    "@byndyusoft/eslint-config": "^1.1.0",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "markdownlint-cli": "^0.30.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-packagejson": "^2.2.15",
+    "ts-patch": "^2.0.1",
+    "typescript": "^4.5.4"
+  },
+  "packageManager": "yarn@3.1.1"
+}
