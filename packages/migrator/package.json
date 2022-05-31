@@ -1,8 +1,8 @@
 {
-  "name": "ᐸMigratorᐳ",
+  "name": "@elizais/preprocessor-migrator",
   "version": "1.0.0",
   "private": true,
-  "description": "ᐸMigrator descriptionᐳ",
+  "description": "Data clean module - Preprocessor",
   "homepage": "https://github.com/Byndyusoft/ᐸRepository nameᐳ#readme",
   "bugs": {
     "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ/issues"
@@ -25,6 +25,8 @@
   "dependencies": {
     "@byndyusoft/class-validator-extended": "^1.0.0",
     "@byndyusoft/nest-swagger": "^5.1.5-2",
+    "@elizais/preprocessor-dtos": "1.0.0",
+    "@elizais/preprocessor-entities": "1.0.0",
     "@nestjs/common": "^8.2.3",
     "@nestjs/core": "^8.2.3",
     "class-transformer": "^0.5.1",
@@ -34,9 +36,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.4.0",
     "tslib": "^2.3.1",
-    "typeorm": "^0.2.41",
-    "ᐸDtosᐳ": "1.0.0",
-    "ᐸEntitiesᐳ": "1.0.0"
+    "typeorm": "^0.2.41"
   },
   "devDependencies": {
     "@byndyusoft/tsconfig": "^1.1.0",

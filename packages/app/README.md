@@ -1,6 +1,6 @@
-# ᐸAppᐳ
+# Preprocessor
 
-ᐸApp descriptionᐳ.
+Data clean module - Preprocessor.
 
 ## General folders layout
 

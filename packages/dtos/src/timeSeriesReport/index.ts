@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Byndyusoft
+ * Copyright 2022 Byndyusoft
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,6 @@
  * limitations under the License.
  */
 
-import { makeDtoFactory } from "@byndyusoft/dto-factory";
-import faker from "faker";
-
-import { UserOutboxDto } from "ᐸDtosᐳ";
-
-import { userDtoFactory } from "./userDtoFactory";
-
-export const userOutboxDtoFactory = makeDtoFactory<UserOutboxDto>(() => ({
-  ...userDtoFactory.build(),
-
-  deletedAt: faker.date.soon(),
-}));
+export * from "./comon";
+export * from "./enums";
+export * from "./getData";

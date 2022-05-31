@@ -14,19 +14,18 @@
  * limitations under the License.
  */
 
+import * as entities from "@elizais/preprocessor-entities";
 import { Global, Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 
-import * as entities from "ᐸEntitiesᐳ";
+// import * as users from "./users";
 
-import * as users from "./users";
-
-const providers = [...Object.values(users)];
+// const providers = [...Object.values(users)];
 
 @Global()
 @Module({
   imports: [TypeOrmModule.forFeature(Object.values(entities))],
-  providers,
-  exports: providers,
+  // providers,
+  // exports: providers,
 })
 export class DataAccessModule {}

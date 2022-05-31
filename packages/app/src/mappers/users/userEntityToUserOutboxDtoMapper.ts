@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-import { UserOutboxDto } from "ᐸDtosᐳ";
-import { UserEntity } from "ᐸEntitiesᐳ";
-
-export class UserEntityToUserOutboxDtoMapper {
-  public static map(...entities: UserEntity[]): UserOutboxDto[] {
-    return entities.map<UserOutboxDto>((x) => ({
-      userId: x.userId,
-      name: x.name,
-      email: x.email,
-      userVersion: x.userVersion,
-      deletedAt: x.deletedAt ?? undefined,
-    }));
-  }
-}
+// import { UserOutboxDto } from "ᐸDtosᐳ";
+// import { UserEntity } from "ᐸEntitiesᐳ";
+//
+// export class UserEntityToUserOutboxDtoMapper {
+//   public static map(...entities: UserEntity[]): UserOutboxDto[] {
+//     return entities.map<UserOutboxDto>((x) => ({
+//       userId: x.userId,
+//       name: x.name,
+//       email: x.email,
+//       userVersion: x.userVersion,
+//       deletedAt: x.deletedAt ?? undefined,
+//     }));
+//   }
+// }

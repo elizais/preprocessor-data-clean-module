@@ -1,6 +1,6 @@
-# ᐸMigratorᐳ
+# @elizais/preprocessor-migrator
 
-ᐸMigrator descriptionᐳ.
+Data clean module - Preprocessor
 
 ## General folders layout
 

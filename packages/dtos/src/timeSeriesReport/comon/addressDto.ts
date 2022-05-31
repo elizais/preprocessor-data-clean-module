@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Byndyusoft
+ * Copyright 2022 Byndyusoft
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,9 @@
  * limitations under the License.
  */
 
-import { makeDtoFactory } from "@byndyusoft/dto-factory";
-import _ from "lodash";
+import { IsString } from "class-validator";
 
-import { ParamsWithUserIdDto } from "ᐸDtosᐳ";
-
-import { userDtoFactory } from "./userDtoFactory";
-
-export const paramsWithUserIdDtoFactory = makeDtoFactory<ParamsWithUserIdDto>(
-  () => _.pick(userDtoFactory.build(), "userId"),
-);
+export class AddressDto {
+  @IsString()
+  public readonly address!: string;
+}

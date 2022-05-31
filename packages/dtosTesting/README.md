@@ -1,14 +1,6 @@
-# ᐸDtos testingᐳ
+# preprocessor-dtos-testingᐳ
 
-ᐸDtos testing descriptionᐳ.
-
-## Install
-
-```bash
-yarn add --dev ᐸDtos testingᐳ ᐸDtosᐳ
-```
-
-You also need install all required peer dependencies.
+Data clean module - Preprocessor.
 
 ## General folders layout
 

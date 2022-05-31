@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Byndyusoft
+ * Copyright 2022 Byndyusoft
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,4 +14,13 @@
  * limitations under the License.
  */
 
-export * from "./updateUserDtoFactory";
+import { IsArray, IsNumber } from "class-validator";
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
+type NumberNullType = number | null;
+
+export class TimeSeriesDto {
+  @IsNumber()
+  @IsArray()
+  public readonly values!: NumberNullType[];
+}

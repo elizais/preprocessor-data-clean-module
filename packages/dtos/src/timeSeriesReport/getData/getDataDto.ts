@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Byndyusoft
+ * Copyright 2022 Byndyusoft
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,10 +14,8 @@
  * limitations under the License.
  */
 
-import { PickType } from "@byndyusoft/nest-swagger";
+import { IntersectionType } from "@byndyusoft/nest-swagger";
 
-import { UserDto } from "./userDto";
+import { AddressDto, TimeSeriesDto } from "~/src";
 
-export class QueryWithUserVersionDto extends PickType(UserDto, [
-  "userVersion",
-]) {}
+export class GetDataDto extends IntersectionType(AddressDto, TimeSeriesDto) {}

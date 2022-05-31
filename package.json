@@ -1,15 +1,15 @@
 {
-  "name": "root",
+  "name": "preprocessor-data-clean-module",
   "version": "1.0.0",
   "private": true,
-  "description": "root workspace",
-  "homepage": "https://github.com/Byndyusoft/ᐸRepository nameᐳ#readme",
+  "description": "Data clean module - Preprocessor",
+  "homepage": "https://github.com/elizais/preprocessor-data-clean-module#readme",
   "bugs": {
-    "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ/issues"
+    "url": "https://github.com/elizais/preprocessor-data-clean-module/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ.git"
+    "url": "https://github.com/elizais/preprocessor-data-clean-module.git"
   },
   "license": "Apache-2.0",
   "author": "Byndyusoft",

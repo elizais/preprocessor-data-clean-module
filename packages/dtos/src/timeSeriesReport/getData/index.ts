@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Byndyusoft
+ * Copyright 2022 Byndyusoft
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,4 @@
  * limitations under the License.
  */
 
-export * from "./paramsWithUserIdDtoFactory";
-export * from "./queryWithUserVersionDtoFactory";
-export * from "./userDtoFactory";
-export * from "./userOutboxDtoFactory";
+export * from "./getDataDto";

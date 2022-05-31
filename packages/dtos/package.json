@@ -1,14 +1,14 @@
 {
-  "name": "ᐸDtosᐳ",
+  "name": "@elizais/preprocessor-dtos",
   "version": "1.0.0",
-  "description": "ᐸDtos descriptionᐳ",
-  "homepage": "https://github.com/Byndyusoft/ᐸRepository nameᐳ#readme",
+  "description": "Data clean module - Preprocessor",
+  "homepage": "https://github.com/elizais/preprocessor-data-clean-module/tree/master/packages/dtos#readme",
   "bugs": {
-    "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ/issues"
+    "url": "https://github.com/elizais/preprocessor-data-clean-module/tree/master/packages/dtos/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ.git"
+    "url": "https://github.com/elizais/preprocessor-data-clean-module/tree/master/packages/dtos.git"
   },
   "license": "Apache-2.0",
   "author": "Byndyusoft",

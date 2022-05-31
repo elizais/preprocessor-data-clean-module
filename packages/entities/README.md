@@ -1,14 +1,6 @@
-# ᐸEntitiesᐳ
+# preprocessor-entities
 
-ᐸEntities descriptionᐳ.
-
-## Install
-
-```bash
-yarn add ᐸEntitiesᐳ ᐸDtosᐳ typeorm
-```
-
-You also need install all required peer dependencies.
+Data clean module - Preprocessor.
 
 ## General folders layout
 

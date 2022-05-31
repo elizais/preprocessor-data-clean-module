@@ -14,17 +14,13 @@
  * limitations under the License.
  */
 
-import { makeDtoFactory } from "@byndyusoft/dto-factory";
-import faker from "faker";
+import { Module } from "@nestjs/common";
 
-import { ListUsersResponseDto } from "ᐸDtosᐳ";
+import { PreprocessorController } from "./preprocessorController";
+import { PreprocessorService } from "./preprocessorService";
 
-import { userDtoFactory } from "../common";
-
-export const listUsersResponseDtoFactory = makeDtoFactory<ListUsersResponseDto>(
-  () => ({
-    users: userDtoFactory.buildList(faker.datatype.number(10)),
-
-    nextPageToken: faker.datatype.number(),
-  }),
-);
+@Module({
+  controllers: [PreprocessorController],
+  providers: [PreprocessorService],
+})
+export class PreprocessorModule {}

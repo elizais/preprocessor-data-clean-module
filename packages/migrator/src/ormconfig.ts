@@ -16,10 +16,9 @@
 
 import path from "path";
 
+import * as entities from "@elizais/preprocessor-entities";
 import dotenv from "dotenv";
 import { ConnectionOptions } from "typeorm";
-
-import * as entities from "ᐸEntitiesᐳ";
 
 dotenv.config({
   path: path.join(process.cwd(), ".env"),

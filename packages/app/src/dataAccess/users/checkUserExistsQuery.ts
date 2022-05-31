@@ -14,32 +14,32 @@
  * limitations under the License.
  */
 
-import { TracingService } from "@byndyusoft/nest-opentracing";
-import { Injectable } from "@nestjs/common";
-import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
-
-import { ParamsWithUserIdDto } from "ᐸDtosᐳ";
-import { UserEntity } from "ᐸEntitiesᐳ";
-
-@Injectable()
-export class CheckUserExistsQuery {
-  public constructor(
-    @InjectRepository(UserEntity)
-    private readonly __userRepository: Repository<UserEntity>,
-    private readonly __tracingService: TracingService,
-  ) {}
-
-  public ask(options: ParamsWithUserIdDto): Promise<boolean> {
-    return this.__tracingService.traceAsyncFunction(
-      nameof(CheckUserExistsQuery),
-      async () => {
-        const user = await this.__userRepository.findOne(options.userId, {
-          select: ["userId"],
-        });
-
-        return !!user;
-      },
-    );
-  }
-}
+// import { TracingService } from "@byndyusoft/nest-opentracing";
+// import { Injectable } from "@nestjs/common";
+// import { InjectRepository } from "@nestjs/typeorm";
+// import { Repository } from "typeorm";
+//
+// import { ParamsWithUserIdDto } from "ᐸDtosᐳ";
+// import { UserEntity } from "ᐸEntitiesᐳ";
+//
+// @Injectable()
+// export class CheckUserExistsQuery {
+//   public constructor(
+//     @InjectRepository(UserEntity)
+//     private readonly __userRepository: Repository<UserEntity>,
+//     private readonly __tracingService: TracingService,
+//   ) {}
+//
+//   public ask(options: ParamsWithUserIdDto): Promise<boolean> {
+//     return this.__tracingService.traceAsyncFunction(
+//       nameof(CheckUserExistsQuery),
+//       async () => {
+//         const user = await this.__userRepository.findOne(options.userId, {
+//           select: ["userId"],
+//         });
+//
+//         return !!user;
+//       },
+//     );
+//   }
+// }

@@ -1,14 +1,6 @@
-# ᐸClientᐳ
+# preprocessor-api-client
 
-ᐸClient descriptionᐳ.
-
-## Install
-
-```bash
-yarn add ᐸClientᐳ ᐸDtosᐳ @nestjs/axios @nestjs/common rxjs
-```
-
-You also need install all required peer dependencies.
+Data clean module - Preprocessor.
 
 ## General folders layout
 

@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
+import * as entities from "@elizais/preprocessor-entities";
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
-
-import * as entities from "ᐸEntitiesᐳ";
 
 import { ConfigDto } from "../config";
 

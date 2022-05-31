@@ -1,14 +1,14 @@
 {
-  "name": "ᐸDtos testingᐳ",
+  "name": "@elizais/preprocessor-dtos-testing",
   "version": "1.0.0",
-  "description": "ᐸDtos testing descriptionᐳ",
-  "homepage": "https://github.com/Byndyusoft/ᐸRepository nameᐳ#readme",
+  "description": "Data clean module - Preprocessor",
+  "homepage": "https://github.com/elizais/preprocessor-data-clean-module#readme",
   "bugs": {
-    "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ/issues"
+    "url": "https://github.com/elizais/preprocessor-data-clean-module/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Byndyusoft/ᐸRepository nameᐳ.git"
+    "url": "https://github.com/elizais/preprocessor-data-clean-module.git"
   },
   "license": "Apache-2.0",
   "author": "Byndyusoft",
@@ -40,6 +40,7 @@
     "@byndyusoft/class-validator-extended": "^1.0.0",
     "@byndyusoft/nest-swagger": "^5.1.5-2",
     "@byndyusoft/tsconfig": "^1.1.0",
+    "@elizais/preprocessor-dtos": "1.0.0",
     "@nestjs/common": "^8.2.3",
     "@nestjs/core": "^8.2.3",
     "@types/faker": "^5.5.9",
@@ -51,11 +52,10 @@
     "rxjs": "^7.4.0",
     "shx": "^0.3.3",
     "typescript": "^4.5.4",
-    "typescript-transform-paths": "^3.3.1",
-    "ᐸDtosᐳ": "1.0.0"
+    "typescript-transform-paths": "^3.3.1"
   },
   "peerDependencies": {
-    "ᐸDtosᐳ": "1.0.0"
+    "@elizais/preprocessor-dtos": "1.0.0"
   },
   "engines": {
     "node": ">=14"

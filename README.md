@@ -1,9 +1,9 @@
-# ᐸRepository nameᐳ
+# Preprocessor-data-clean-module
 
 [![test workflow](https://github.com/Byndyusoft/nest-template/actions/workflows/test.yaml/badge.svg?branch=master)](https://github.com/Byndyusoft/nest-template/actions/workflows/test.yaml)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-ᐸRepository descriptionᐳ.
+Data clean module - Preprocessor.
 
 ## Monorepo
 
@@ -14,7 +14,6 @@ Monorepo structure is described in root [package.json](./package.json) and conta
 - [dtos](./packages/dtos) - common dtos between service and its client
 - [dtosTesting](./packages/dtosTesting) - dtos factories for unit tests
 - [entities](./packages/dtosTesting) - entities
-- [migrator](./packages/migrator) - service migrator
 
 ## Prerequisites
 

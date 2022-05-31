@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-import { UserDto } from "ᐸDtosᐳ";
-import { UserEntity } from "ᐸEntitiesᐳ";
-
-export class UserEntityToUserDtoMapper {
-  public static map(...entities: UserEntity[]): UserDto[] {
-    return entities.map<UserDto>((x) => ({
-      userId: x.userId,
-      name: x.name,
-      email: x.email,
-      userVersion: x.userVersion,
-    }));
-  }
-}
+// import { UserDto } from "ᐸDtosᐳ";
+// import { UserEntity } from "ᐸEntitiesᐳ";
+//
+// export class UserEntityToUserDtoMapper {
+//   public static map(...entities: UserEntity[]): UserDto[] {
+//     return entities.map<UserDto>((x) => ({
+//       userId: x.userId,
+//       name: x.name,
+//       email: x.email,
+//       userVersion: x.userVersion,
+//     }));
+//   }
+// }

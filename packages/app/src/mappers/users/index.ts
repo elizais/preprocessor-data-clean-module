@@ -14,5 +14,5 @@
  * limitations under the License.
  */
 
-export * from "./userEntityToUserDtoMapper";
-export * from "./userEntityToUserOutboxDtoMapper";
+// export * from "./userEntityToUserDtoMapper";
+// export * from "./userEntityToUserOutboxDtoMapper";
