@@ -16,3 +16,4 @@
 
 export * from "./addressDto";
 export * from "./timeSeriesDto";
+export * from "./timeSeriesReportDto";

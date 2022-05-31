@@ -61,7 +61,7 @@ export class TimeSeriesReportEntity {
   public readonly dispersion!: number | null;
 
   @Column({
-    type: "datetime",
+    type: "timestamptz",
     name: "timestamp",
     nullable: false,
   })
@@ -79,12 +79,12 @@ export class TimeSeriesReportEntity {
     name: "recovered_data",
     nullable: true,
   })
-  public readonly recoveredData!: TimeSeriesDto;
+  public readonly recoveredData!: TimeSeriesDto | null;
 
   @Column({
     type: "jsonb",
     name: "training_sample",
     nullable: true,
   })
-  public readonly trainingSample!: TimeSeriesDto;
+  public readonly trainingSample!: TimeSeriesDto | null;
 }

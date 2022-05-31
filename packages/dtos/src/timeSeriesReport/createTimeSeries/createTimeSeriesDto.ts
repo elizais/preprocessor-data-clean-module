@@ -14,8 +14,12 @@
  * limitations under the License.
  */
 
-import { IntersectionType } from "@byndyusoft/nest-swagger";
+import { PickType } from "@byndyusoft/nest-swagger";
 
-import { AddressDto, TimeSeriesDto } from "../comon";
+import { TimeSeriesReportDto } from "../comon";
 
-export class GetDataDto extends IntersectionType(AddressDto, TimeSeriesDto) {}
+export class CreateTimeSeriesDto extends PickType(TimeSeriesReportDto, [
+  "address",
+  "timestamp",
+  "rawData",
+]) {}
