@@ -16,7 +16,14 @@
 
 import { ApiTags } from "@byndyusoft/nest-swagger";
 import { AddressDto, GetDataDto } from "@elizais/preprocessor-dtos";
-import { Controller, Get, HttpStatus, Query } from "@nestjs/common";
+import {
+  Controller,
+  Get,
+  HttpStatus,
+  NotImplementedException,
+  Post,
+  Query,
+} from "@nestjs/common";
 
 import { ApiCommonResponses } from "~/src";
 
@@ -30,50 +37,30 @@ import { PreprocessorService } from "./preprocessorService";
 export class PreprocessorController {
   public constructor(private readonly __service: PreprocessorService) {}
 
+  @ApiCommonResponses(HttpStatus.BAD_REQUEST)
+  @Post("/")
+  public sendRecoveryData(): Promise<GetDataDto> {
+    throw NotImplementedException;
+    // return this.__service.getTrainingSample(query);
+  }
+
   @ApiCommonResponses(HttpStatus.BAD_REQUEST, HttpStatus.NOT_FOUND)
   @Get("/rawData")
   public getRawData(@Query() query: AddressDto): Promise<GetDataDto> {
     return this.__service.getRawData(query);
   }
 
-  // @ApiCommonResponses(HttpStatus.BAD_REQUEST)
-  // @Get("/")
-  // public listUsers(
-  //   @Query() query: ListUsersQueryDto,
-  // ): Promise<ListUsersResponseDto> {
-  //   return this.__service.listUsers(query);
-  // }
-  //
-  // @ApiCommonResponses(HttpStatus.BAD_REQUEST, HttpStatus.NOT_FOUND)
-  // @Get("/:userId")
-  // public getUserById(@Param() params: ParamsWithUserIdDto): Promise<UserDto> {
-  //   return this.__service.getUserById(params);
-  // }
-  //
-  // @ApiCommonResponses(
-  //   HttpStatus.BAD_REQUEST,
-  //   HttpStatus.NOT_FOUND,
-  //   HttpStatus.CONFLICT,
-  // )
-  // @Patch("/:userId")
-  // public updateUser(
-  //   @Param() params: ParamsWithUserIdDto,
-  //   @Query() query: QueryWithUserVersionDto,
-  //   @Body() body: UpdateUserDto,
-  // ): Promise<UserDto> {
-  //   return this.__service.updateUser(params, query, body);
-  // }
-  //
-  // @ApiCommonResponses(
-  //   HttpStatus.BAD_REQUEST,
-  //   HttpStatus.NOT_FOUND,
-  //   HttpStatus.CONFLICT,
-  // )
-  // @Delete("/:userId")
-  // public deleteUser(
-  //   @Param() params: ParamsWithUserIdDto,
-  //   @Query() query: QueryWithUserVersionDto,
-  // ): Promise<UserDto> {
-  //   return this.__service.deleteUser(params, query);
-  // }
+  @ApiCommonResponses(HttpStatus.BAD_REQUEST, HttpStatus.NOT_FOUND)
+  @Get("/recoveredData")
+  public getRecoveredData(): Promise<GetDataDto> {
+    throw NotImplementedException;
+    // return this.__service.getRecoveredData(query);
+  }
+
+  @ApiCommonResponses(HttpStatus.BAD_REQUEST, HttpStatus.NOT_FOUND)
+  @Get("/recoveredData")
+  public getTrainingSample(): Promise<GetDataDto> {
+    throw NotImplementedException;
+    // return this.__service.getTrainingSample(query);
+  }
 }
