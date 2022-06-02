@@ -14,8 +14,18 @@
  * limitations under the License.
  */
 
-export enum TimeSeriesReportStatus {
-  created = "CREATED",
-  done = "DONE",
-  deleted = "DELETED",
+import { Injectable } from "@nestjs/common";
+// import DTW = require("dynamic-time-warping");
+
+@Injectable()
+export class ImputationMissingDataComand {
+  // private DistanceCalculation(query: number[], candidate: number[]): number {
+  //   // eslint-disable-next-line unicorn/consistent-function-scoping
+  //   const distFunction = (a: number, b: number): number => Math.abs(a - b);
+  //
+  //   const dtw = new DTW(query, candidate, distFunction);
+  //   return dtw.getDistance();
+  // }
+  //
+  // private
 }

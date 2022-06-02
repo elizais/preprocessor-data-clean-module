@@ -14,8 +14,15 @@
  * limitations under the License.
  */
 
-export enum TimeSeriesReportStatus {
-  created = "CREATED",
-  done = "DONE",
-  deleted = "DELETED",
+import { TransformToDate } from "@byndyusoft/class-validator-extended";
+import { IsDate, IsNumber, IsOptional } from "class-validator";
+
+export class TimeSeriesElementDto {
+  @TransformToDate()
+  @IsDate()
+  public readonly timestamp!: Date;
+
+  @IsNumber()
+  @IsOptional()
+  public readonly point?: number;
 }

@@ -1011,6 +1011,7 @@ __metadata:
     "@nestjs/schematics": ^8.0.5
     "@nestjs/terminus": ^8.0.3
     "@nestjs/typeorm": ^8.0.2
+    "@types/dynamic-time-warping": ^1.0.0
     "@types/express": ^4.17.13
     "@types/jaeger-client": ^3.18.3
     "@types/jest": ^27.0.3
@@ -1751,6 +1752,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: fe81351470f2d3165e8b12ce33542eef89ea893e36dd62e8f7d72566dfb7e448376ae962f9f3ea888547ce8b55a40020ca0e01d637fab5d99567673084542641
+  languageName: node
+  linkType: hard
+
+"@types/dynamic-time-warping@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@types/dynamic-time-warping@npm:1.0.0"
+  checksum: 159eaae5cc649c525e40b87b29f9153b8962146bc653978c3e854202809740b9753fad2f98757fd460a30886399e56551b19e6f885b8994e5c37a785f77e4061
   languageName: node
   linkType: hard
 

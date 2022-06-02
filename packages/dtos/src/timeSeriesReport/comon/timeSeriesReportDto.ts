@@ -14,21 +14,20 @@
  * limitations under the License.
  */
 
-import { TransformToDate } from "@byndyusoft/class-validator-extended";
 import { Type } from "class-transformer";
 import {
   IsArray,
-  IsDate,
   IsEnum,
   IsNumber,
   IsNumberString,
   IsOptional,
   IsString,
+  ValidateNested,
 } from "class-validator";
 
 import { TimeSeriesReportStatus } from "../enums";
 
-import { TimeSeriesDto } from "./timeSeriesDto";
+import { TimeSeriesElementDto } from "./timeSeriesElementDto";
 
 export class TimeSeriesReportDto {
   @IsNumberString({ no_symbols: true })
@@ -48,19 +47,20 @@ export class TimeSeriesReportDto {
   @IsOptional()
   public readonly dispersion?: number;
 
-  @TransformToDate()
+  @Type(() => TimeSeriesElementDto)
   @IsArray()
-  @IsDate({ each: true })
-  public readonly timestamp!: Date[];
+  @ValidateNested({ each: true })
+  public readonly rawData!: TimeSeriesElementDto[];
 
-  @Type(() => TimeSeriesDto)
-  public readonly rawData!: TimeSeriesDto;
-
-  @Type(() => TimeSeriesDto)
+  @Type(() => TimeSeriesElementDto)
+  @IsArray()
+  @ValidateNested({ each: true })
   @IsOptional()
-  public readonly recoveredData?: TimeSeriesDto;
+  public readonly recoveredData?: TimeSeriesElementDto;
 
-  @Type(() => TimeSeriesDto)
+  @Type(() => TimeSeriesElementDto)
+  @IsArray()
+  @ValidateNested({ each: true })
   @IsOptional()
-  public readonly trainingSample?: TimeSeriesDto;
+  public readonly trainingSample?: TimeSeriesElementDto;
 }
