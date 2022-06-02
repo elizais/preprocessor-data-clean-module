@@ -17,7 +17,7 @@
 import { IsArray, IsNumber } from "class-validator";
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
-type NumberNullType = number | null;
+export type NumberNullType = number | null;
 
 export class TimeSeriesDto {
   @IsNumber()

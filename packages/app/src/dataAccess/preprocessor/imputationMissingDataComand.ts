@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
+// import { NumberNullType } from "@elizais/preprocessor-dtos";
 import { Injectable } from "@nestjs/common";
 // import DTW = require("dynamic-time-warping");
 
 @Injectable()
 export class ImputationMissingDataComand {
-  // private DistanceCalculation(query: number[], candidate: number[]): number {
+  // private distanceCalculation(query: number[], candidate: number[]): number {
   //   // eslint-disable-next-line unicorn/consistent-function-scoping
   //   const distFunction = (a: number, b: number): number => Math.abs(a - b);
   //
@@ -27,5 +28,8 @@ export class ImputationMissingDataComand {
   //   return dtw.getDistance();
   // }
   //
-  // private
+  // private searchIndexMissingValue(timesiries: NumberNullType[]): NumberNullType[]{
+  //   const index = timesiries.indexOf(null);
+  //   return timesiries.slice(index);
+  // }
 }

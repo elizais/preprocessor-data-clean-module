@@ -20,6 +20,5 @@ import { TimeSeriesReportDto } from "../comon";
 
 export class CreateTimeSeriesDto extends PickType(TimeSeriesReportDto, [
   "address",
-  "timestamp",
   "rawData",
 ]) {}
